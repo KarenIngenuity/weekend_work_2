@@ -4,11 +4,15 @@ def split_array(array, array_size)
   new_array = []
   first_index = 0
   new_array << array[0..array_size - 1]
-  until first_index + array_size - 1 == array.index(array.last)
-    first_index = first_index + array_size
-    new_array << array[first_index..(first_index + array_size - 1)]
+  if array.count % array_size == 0
+    until first_index + array_size - 1 == array.index(array.last)
+      first_index = first_index + array_size
+      new_array << array[first_index..(first_index + array_size - 1)]
+    end
+    return new_array
+  else
+    return "Please ensure that the number representing how many objects are in your array is divisible by your desired inner-array size."
   end
-  return new_array
 end
 
 # Driver code - don't touch anything below this line.
