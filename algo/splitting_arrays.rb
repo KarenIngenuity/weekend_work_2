@@ -15,6 +15,11 @@ def split_array(array, array_size)
   end
 end
 
+puts "Testing an invalid divisor:"
+puts split_array([0, 1, 2, 3, 4, 5, 6], 2)
+puts
+puts
+
 # Driver code - don't touch anything below this line.
 puts "TESTING split_array..."
 puts
