@@ -16,10 +16,10 @@
 
 class Superhero
 attr_accessor :name, :hitpoints, :attack, :alive
-  def initialize(input_options)
-    @name = input_options[:name]
-    @hitpoints = input_options[:hitpoints]
-    @attack = input_options[:attack]
+  def initialize(name_hitpoints_attack)
+    @name = :name
+    @hitpoints = :hitpoints.to_i
+    @attack = :attack.to_i
     @alive = true
     @has_special_tool = false
   end
@@ -36,7 +36,7 @@ attr_accessor :name, :hitpoints, :attack, :alive
     if @has_special_tool == true
       @attack = @attack * 3
     end
-    recipient_superhero.hitpoints += - @attack
+    recipient_superhero.hitpoints = recipient_superhero.hitpoints - @attack
     if recipient_superhero.hitpoints < 1
       recipient_superhero.alive = false
     end
