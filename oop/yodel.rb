@@ -9,7 +9,11 @@
 # constructor accordingly.
 
 class Yodel
-
+  def initialize(segment, count)
+    @segment = segment
+    @count = count
+  end
+  
 end
 
 
