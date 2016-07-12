@@ -17,8 +17,8 @@
 # Karen: Wow, Batman is savage... Literally "overkill." 
 
 class Superhero
-attr_accessor :name, :hitpoints, :attack, :alive 
-attr_reader :has_special_tool
+  attr_accessor :name, :hitpoints, :attack, :alive 
+  attr_reader :has_special_tool
   def initialize(input_options)
     @name = input_options[:name]
     @hitpoints = input_options[:hitpoints]
